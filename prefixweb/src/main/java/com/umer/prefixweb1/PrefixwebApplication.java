@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Prefixweb1Application {
+public class PrefixwebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Prefixweb1Application.class, args);
+		SpringApplication.run(PrefixwebApplication.class, args);
 	}
 
 }
