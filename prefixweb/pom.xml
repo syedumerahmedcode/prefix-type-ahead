@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.umer</groupId>
-	<artifactId>prefixweb1</artifactId>
+	<artifactId>prefixweb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>prefixweb1</name>
+	<name>prefixweb</name>
 	<description>Demo project for Spring Repository</description>
 	<properties>
 		<java.version>11</java.version>
