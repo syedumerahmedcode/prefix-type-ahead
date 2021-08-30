@@ -22,4 +22,9 @@
             </plugin>
         </plugins>
     </build>
+    
+    <modules>
+    	<module>trie1</module>
+    	<module>prefixweb1</module>    	
+    </modules>
 </project>
