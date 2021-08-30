@@ -7,8 +7,8 @@
     <artifactId>prefix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>trie1</artifactId>
-  <name>trie1</name>
+  <artifactId>trie</artifactId>
+  <name>trie</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

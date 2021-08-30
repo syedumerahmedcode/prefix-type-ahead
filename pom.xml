@@ -24,7 +24,7 @@
     </build>
     
     <modules>
-    	<module>trie1</module>
+    	<module>trie</module>
     	<module>prefixweb</module>    	
     </modules>
 </project>
