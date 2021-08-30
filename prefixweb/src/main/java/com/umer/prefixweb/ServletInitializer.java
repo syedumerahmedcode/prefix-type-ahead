@@ -1,4 +1,4 @@
-package com.umer.prefixweb1;
+package com.umer.prefixweb;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
