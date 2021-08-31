@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.umer.prefixweb.service.RedisService;
 import com.umer.prefixweb.service.TrieService;
 
 import lombok.AllArgsConstructor;
 
 @RestController
-//@RequestMapping("/api/v1/trie")
-//@RequestMapping("/v1")
 @AllArgsConstructor
 public class TrieController {
 	
@@ -27,6 +26,7 @@ public class TrieController {
 	public static final String RETRIEVE_PREFIX_END_POINT_V1 = TRIE_END_POINT_V1 + "/retrieve/{prefix}";
 	
 	final private TrieService trieService;
+	final private RedisService redisService;
 	
 	ObjectMapper mapper=new ObjectMapper();
 	
