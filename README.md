@@ -57,7 +57,17 @@ In this scenario, we have 3 nodes which `N1`, `N2` and `N3`. They look up the in
 
 > Cache
 
-TBD.
+This is a Redis Cache with a Key value pair of `<String,String>`. It has finite memory and it will use LRU eviction policy. In my implementation, it is a in memory cache or ephemeral. This means that as soon as application stops, the cache also vanishes. The main reason of using cache is that it has O(1) complexity when looking up saved results whereas in Trie, the complexity is O(v+e) i.e. vertices and edges.
+
+> Cache miss
+
+In case of a cache miss, the system should contact Zookeeper which will determine, based on Start range, which Ip Address should be lookup for creating TrieNodes.
+
+- Not implemented.
+
+> Prefix (Java Spring)
+
+These are responsible for a range of characters and each of them uses PrefixTrie Data Structure(referenced above) to create the Trie Tree.
 
 
 ## Technologies Used
