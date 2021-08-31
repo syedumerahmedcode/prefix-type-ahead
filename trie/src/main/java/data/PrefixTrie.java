@@ -8,8 +8,12 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public class PrefixTrie {
+	private static final int INITIAL_WEIGHT = 0;
+	private static final String EMPTY_PHRASE = "";
 
 	public static class TrieNode {
+		
+		
 		/**
 		 * A recursive list which contains the character and the possible children.
 		 * Default value is a new Hashmap
@@ -33,8 +37,8 @@ public class PrefixTrie {
 		public TrieNode() {
 			children = new HashMap<Character, PrefixTrie.TrieNode>();
 			EOW = false;
-			phrase = "";
-			weight = 0;
+			phrase = EMPTY_PHRASE;
+			weight = INITIAL_WEIGHT;
 		}
 
 		public Map<Character, TrieNode> getChildren() {
@@ -43,7 +47,7 @@ public class PrefixTrie {
 	}
 
 	private TrieNode root;
-	private final Predicate<TrieNode> isLeaf=(currNode)->currNode.children.size()==0;
+	private final Predicate<TrieNode> isLeaf = (currNode) -> currNode.children.size() == 0;
 
 	public PrefixTrie() {
 		root = new TrieNode();
@@ -56,7 +60,7 @@ public class PrefixTrie {
 	 *               tree node by node.
 	 */
 	public void insertPrefix(String phrase) {
-		insertPhrase(phrase, root, 0);
+		insertPhrase(phrase, root, INITIAL_WEIGHT);
 	}
 
 	private void insertPhrase(String phrase, TrieNode currentNode, int index) {
@@ -96,15 +100,14 @@ public class PrefixTrie {
 	}
 
 	private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
-		if(node.EOW==true) {
+		if (node.EOW == true) {
 			result.add(node.phrase);
-			if(isLeaf.test(node)) {
+			if (isLeaf.test(node)) {
 				node.weight++;
 				return result;
 			}
 		}
-		node.children.keySet().stream()
-					.forEach(child->findMatchingPhrases(node.children.get(child), result));
+		node.children.keySet().stream().forEach(child -> findMatchingPhrases(node.children.get(child), result));
 		return result;
 	}
 
@@ -118,7 +121,7 @@ public class PrefixTrie {
 	 * @return The Subtree
 	 */
 	private TrieNode findSubTree(String prefix) {
-		return findSubtree(root, prefix, 0);
+		return findSubtree(root, prefix, INITIAL_WEIGHT);
 	}
 
 	private TrieNode findSubtree(TrieNode currentNode, String prefix, int index) {
