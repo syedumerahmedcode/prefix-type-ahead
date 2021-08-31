@@ -17,6 +17,7 @@
 	<description>Demo project for Spring Repository</description>
 	<properties>
 		<java.version>11</java.version>
+		<trie.version>0.0.1-SNAPSHOT</trie.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -44,7 +45,7 @@
 		<dependency>
 			<groupId>com.umer</groupId>
 			<artifactId>trie</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${trie.version}</version>
 			<scope>compile</scope>
 		</dependency>
 
