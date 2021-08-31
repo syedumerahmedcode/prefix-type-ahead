@@ -1,4 +1,4 @@
-# type-ahead
+# Prefix type-ahead
 
 ## Table of content
 - [Introduction](#introduction)
