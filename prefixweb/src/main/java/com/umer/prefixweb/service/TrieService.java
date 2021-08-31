@@ -44,7 +44,7 @@ public class TrieService {
 	}
 
 	private Set<String> checkCachePrefix(String prefix) {
-		Set<String> results = redisTemplate.opsForZSet().reverseRangeByScore(prefix, 0, -1);
+		Set<String> results = redisTemplate.opsForZSet().reverseRange(prefix, 0, -1);
 		return results;
 	}
 
