@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [Explanation TrieNode](#explanation-trienode)
 - [Explanation System Design](#explanation-system-design)
+- [Explanation Redis Commands](#explanation-redis-commands)
 - [Technologies Used](#technologies-used)
 - [Swagger](#swagger)
 - [Commands](#commands)
@@ -81,7 +82,58 @@ The idea is to fetch the data from MongoDB every 5 minutes, clean the cache and 
 
 - Since the cache is in memory right now and no data is saved in MongoDB, Data Aggregator is currently not implemented.
 
+## Explanation Redis Commands
 
+The following are some commands which are serve as an introduction on how to use Redis from command line. Once the concepts are understood, it is easy to program it in Java.
+
+> redis-cli ping
+
+Simple check command. Returns PONG.
+
+> redis-cli
+
+Connects to the docker container and takes the use to the command prompt.
+
+> set testKey testValue
+
+Sets `testKey` with corresponding `testValue`.
+
+> keys '*'
+
+Returns all keys.
+
+> get testKey
+
+Gets all values for `testKey`.
+
+> zadd sortedSetKey 100 sortedSetValue
+
+Adds to a Sorted set, the key: `sortedSetKey`, the score `100` and the value `sortedSetValue`.
+
+> type sortedSetKey
+
+Tells the user that this is a sorted set.
+
+> zrange sortedSetKey 0 -1
+
+Get all values for the key `sortedSetKey`.
+
+> zrange sortedSetKey 0 100 WITHSCORES
+
+Get all values for `sortedSetKey` with scores between 0 and 100.
+
+> zrevrange sortedSetKey 0 -1 WITHSCORES
+
+Get all values for `sortedSetKey` with scores between 0 and 100 but in reverse.
+
+> del sortedSetKey
+
+Deletes values for key `sortedSetKey`.
+
+
+
+
+ 
 
 
 
