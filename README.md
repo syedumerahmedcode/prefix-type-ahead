@@ -150,7 +150,7 @@ Following are the available endpoints
 To compile and test, please execute
 > mvn clean install
 
-To run the application, please navigate to the prefixweb folder and then please execute
+To run the application, please navigate to the `prefixweb` folder and then please execute
 > mvn spring-boot:run
 
 
