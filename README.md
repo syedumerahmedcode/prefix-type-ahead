@@ -11,7 +11,7 @@
 
 This project demonstrates auto completion capability (also known as the look ahead feature) which one sees when one types something in google search bar. To accomplish this Trie data structure is used. The project consists of two modules: `trie` which contains the trie structure for prefix and `prefixweb` which is used to connect the backend with the outside world via REST APIs.
 
-![alt text](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/systemdesign/TrieNodeOnWhiteBoard.jpeg?raw=true)
+![alt text](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/TrieNodeOnWhiteBoard.jpeg?raw=true)
 
 ## Technologies Used
 
