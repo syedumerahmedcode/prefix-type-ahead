@@ -24,6 +24,7 @@ public class TrieController {
 	public static final String TRIE_END_POINT_V1 = "/api/v1/trie";
 	public static final String ADD_PREFIX_END_POINT_V1 = TRIE_END_POINT_V1 + "/insert/{prefix}";
 	public static final String HEALTH_END_POINT_V1 = TRIE_END_POINT_V1 + "/health";
+	public static final String RETRIEVE_PREFIX_END_POINT_V1 = TRIE_END_POINT_V1 + "/retrieve/{prefix}";
 	
 	final private TrieService trieService;
 	
@@ -46,7 +47,10 @@ public class TrieController {
 		return "I am alive";
 	}
 	
-	@GetMapping("/retrieve/{prefix}")
+	@GetMapping(
+			path = RETRIEVE_PREFIX_END_POINT_V1, 
+			produces = MediaType.ALL_VALUE
+			)
 	public String retrievePrefix(@PathVariable("prefix") String prefix) throws JsonProcessingException {
 		List<String> results=trieService.getMatchingPhrases(prefix);
 		return mapper.writeValueAsString(results);
