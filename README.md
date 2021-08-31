@@ -37,7 +37,7 @@ Contains the weight of how often a node is hit in the lookup. Default value is 0
 
 It is important to note that a node can have `EOW=true` but `isLeaf=false`. Check if the node is a leaf or not is done via a predicate. Insertion and searching within the Tree is done via recursion.  
 
-## Explanation TrieNode
+## Explanation System Design
 
 ![SystemOverviewOnWhietBoard](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/SystemOverviewOnWhietBoard.jpeg)
 
