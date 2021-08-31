@@ -41,7 +41,24 @@ It is important to note that a node can have `EOW=true` but `isLeaf=false`. Chec
 
 ![SystemOverviewOnWhietBoard](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/SystemOverviewOnWhietBoard.jpeg)
 
-TBD
+The process flow of the architecture is as follows:
+
+> Clients 
+
+The clients calls prefix which are forwarded to the Application Load Balancer.
+
+> Application Load Balancer(ALB) 
+
+In this scenario, it consists of two parts: `Active` and `Passive`. It is responsible for forwarding requests to nodes.
+
+> Nodes
+
+In this scenario, we have 3 nodes which `N1`, `N2` and `N3`. They look up the information first in the Cache.
+
+> Cache
+
+TBD.
+
 
 ## Technologies Used
 
