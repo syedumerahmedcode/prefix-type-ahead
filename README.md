@@ -142,7 +142,7 @@ Deletes values for key `sortedSetKey`.
 - TBD
 
 ## Swagger
-Following are the available endpoints
+Following are the available end points: 
 
 - TBD
 
