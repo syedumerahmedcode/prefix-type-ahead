@@ -31,7 +31,8 @@ public class TrieService {
 
 	public List<String> getMatchingPhrases(String prefix) {
 		Set<String> results = redisService.checkCachePrefix(prefix);
-		if (results.size() > 0) {
+		final boolean checkIfCacheHasResults = results.size() > 0;
+		if (checkIfCacheHasResults) {
 			return new ArrayList<String>(results);
 		} else {
 			return prefixTrie.findMatchingPhrases(prefix);
@@ -41,7 +42,7 @@ public class TrieService {
 	public void insertPrefix(String prefix) {
 		prefixTrie.insertPrefix(prefix);
 		/**
-		 * Once a prefix is inserted into the Trie for the first time, w we want to
+		 * Once a prefix is inserted into the Trie for the first time, we want to
 		 * inject it into the cache as well.
 		 */
 		redisService.insertIntoCache(prefix);

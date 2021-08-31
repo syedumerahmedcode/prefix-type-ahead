@@ -9,9 +9,12 @@ import org.springframework.data.redis.core.RedisTemplate;
 @Configuration
 public class RedisConfiguration {
 
+	private static final int PORT = 6379;
+	private static final String HOST_NAME = "localhost";
+
 	@Bean
 	JedisConnectionFactory getJedisConnectionFactory() {
-		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("localhost", 6379);
+		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(HOST_NAME, PORT);
 		return new JedisConnectionFactory(redisStandaloneConfiguration);
 	}
 
