@@ -2,6 +2,7 @@
 
 ## Table of content
 - [Introduction](#introduction)
+- [Explanation TrieNode](#explanation-trienode)
 - [Technologies Used](#technologies-used)
 - [Swagger](#swagger)
 - [Commands](#commands)
@@ -11,7 +12,26 @@
 
 This project demonstrates auto completion capability (also known as the look ahead feature) which one sees when one types something in google search bar. To accomplish this Trie data structure is used. The project consists of two modules: `trie` which contains the trie structure for prefix and `prefixweb` which is used to connect the backend with the outside world via REST APIs.
 
-![alt text](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/TrieNodeOnWhiteBoard.jpeg?raw=true)
+## Explanation TrieNode
+![TrieNodeOnWhiteBoard](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/TrieNodeOnWhiteBoard.jpeg?raw=true)
+
+The TrieNode consists of the following components:
+
+> Map<Character, TrieNode> children
+
+A recursive list which contains the character and the possible children.Default value is a new Hashmap.
+
+> EOW
+
+True if we reached the end of the word. Default value is false.
+
+> phrase
+
+What is the complete phrase in the node chain. Default value is an empty string.
+
+> weight
+
+Contains the weight of how often a node is hit in the lookup. Default value is 0.
 
 ## Technologies Used
 
