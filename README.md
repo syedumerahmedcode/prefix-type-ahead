@@ -3,6 +3,7 @@
 ## Table of content
 - [Introduction](#introduction)
 - [Explanation TrieNode](#explanation-trienode)
+- [Explanation System Design](#explanation-system-design)
 - [Technologies Used](#technologies-used)
 - [Swagger](#swagger)
 - [Commands](#commands)
@@ -34,7 +35,13 @@ What is the complete phrase in the node chain. Default value is an empty string.
 
 Contains the weight of how often a node is hit in the lookup. Default value is 0.
 
-It is important to note that a node can have `EOW=true` but `isLeaf=false`. Check if the node is a leaf or not is done via a predicate. Insertiona and searching within the Tree is done via recursion.  
+It is important to note that a node can have `EOW=true` but `isLeaf=false`. Check if the node is a leaf or not is done via a predicate. Insertion and searching within the Tree is done via recursion.  
+
+## Explanation TrieNode
+
+![SystemOverviewOnWhietBoard](https://github.com/syedumerahmedcode/prefix/blob/master/src/main/resources/syetemdesign/SystemOverviewOnWhietBoard.jpeg)
+
+TBD
 
 ## Technologies Used
 
