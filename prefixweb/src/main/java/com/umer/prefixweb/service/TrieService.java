@@ -25,9 +25,6 @@ public class TrieService {
 	@Autowired
 	private RedisService redisService;
 
-//	@Autowired
-//	private RedisTemplate<String, String> redisTemplate;
-
 	public TrieService() {
 		this.prefixTrie = new PrefixTrie();
 	}
@@ -39,13 +36,7 @@ public class TrieService {
 		} else {
 			return prefixTrie.findMatchingPhrases(prefix);
 		}
-
 	}
-
-//	private Set<String> checkCachePrefix(String prefix) {
-//		Set<String> results = redisTemplate.opsForZSet().reverseRange(prefix, 0, -1);
-//		return results;
-//	}
 
 	public void insertPrefix(String prefix) {
 		prefixTrie.insertPrefix(prefix);
@@ -54,11 +45,6 @@ public class TrieService {
 		 * inject it into the cache as well.
 		 */
 		redisService.insertIntoCache(prefix);
-
 	}
-
-//	private void insertIntoCache(String prefix) {
-//		redisTemplate.opsForZSet().add(prefix, prefix, 1);
-//	}
 
 }
