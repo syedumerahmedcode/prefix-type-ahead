@@ -20,13 +20,13 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class TrieController {
 	
-	public static final String TRIE_END_POINT_V1 = "/api/v1/trie";
+	public static final String API_VERSION_V1 = "/v1";
+	public static final String TRIE_END_POINT_V1 = "/api"+API_VERSION_V1+"/trie";
 	public static final String ADD_PREFIX_END_POINT_V1 = TRIE_END_POINT_V1 + "/insert/{prefix}";
 	public static final String HEALTH_END_POINT_V1 = TRIE_END_POINT_V1 + "/health";
 	public static final String RETRIEVE_PREFIX_END_POINT_V1 = TRIE_END_POINT_V1 + "/retrieve/{prefix}";
 	
 	final private TrieService trieService;
-	final private RedisService redisService;
 	
 	ObjectMapper mapper=new ObjectMapper();
 	
