@@ -63,11 +63,26 @@ This is a Redis Cache with a Key value pair of `<String,String>`. It has finite 
 
 In case of a cache miss, the system should contact Zookeeper which will determine, based on Start range, which Ip Address should be lookup for creating TrieNodes.
 
-- Not implemented.
+- Zookeeper part is currently not implemented.
 
 > Prefix (Java Spring)
 
 These are responsible for a range of characters and each of them uses PrefixTrie Data Structure(referenced above) to create the Trie Tree.
+
+> MongoDB
+
+The trie structures created via spring boot application are saved in MongoDB.
+
+- MongoDB part is currently not implemented. The Trie structure is present only till the application runs. As soon as the application terminates, the data is lost.
+
+> Data Aggregator
+
+The idea is to fetch the data from MongoDB every 5 minutes, clean the cache and re-populate it with aggregated data. This is needed so that the cache does not become stale.
+
+- Since the cache is in memory right now and no data is saved in MongoDB, Data Aggregator is currently not implemented.
+
+
+
 
 
 ## Technologies Used
