@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			</dependency>
+		</dependency>
 	</dependencies>
 
 	<build>
