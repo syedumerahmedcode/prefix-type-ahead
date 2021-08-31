@@ -52,6 +52,10 @@ public class TrieController {
 			produces = MediaType.ALL_VALUE
 			)
 	public String retrievePrefix(@PathVariable("prefix") String prefix) throws JsonProcessingException {
+		/**
+		 * Lets hit the cache first, then if we get a cache miss, 
+		 * then we want to pull the information from the tree. 
+		 */
 		List<String> results=trieService.getMatchingPhrases(prefix);
 		return mapper.writeValueAsString(results);
 	}
