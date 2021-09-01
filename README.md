@@ -89,6 +89,13 @@ The idea is to fetch the data from MongoDB every 5 minutes, clean the cache and 
 
 ## Explanation Redis Commands
 
+The command used to create a docker instance of redis: 
+
+> docker run --name trie-redis -p 6379:6379 -d redis
+
+where `--name` is the name of the docker container, `-p` specifies the port mapping `external:internal` and `-d` tells to run it in detached mode.
+
+
 The following are some commands which are serve as an introduction on how to use Redis from command line. Once the concepts are understood, it is easy to program it in Java.
 
 > redis-cli ping
