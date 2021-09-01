@@ -3,6 +3,7 @@
 ## Table of content
 - [Introduction](#introduction)
 - [Explanation TrieNode](#explanation-trienode)
+- [Explanation DFS](#explanation-def)
 - [Explanation System Design](#explanation-system-design)
 - [Explanation Redis Commands](#explanation-redis-commands)
 - [Technologies Used](#technologies-used)
@@ -37,6 +38,10 @@ What is the complete phrase in the node chain. Default value is an empty string.
 Contains the weight of how often a node is hit in the lookup. Default value is 0.
 
 It is important to note that a node can have `EOW=true` but `isLeaf=false`. Check if the node is a leaf or not is done via a predicate. Insertion and searching within the Tree is done via recursion(Depth First Search or DFS).  
+
+## Explanation DFS
+
+- TBD
 
 ## Explanation System Design
 
