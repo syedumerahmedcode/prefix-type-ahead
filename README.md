@@ -3,7 +3,7 @@
 ## Table of content
 - [Introduction](#introduction)
 - [Explanation TrieNode](#explanation-trienode)
-- [Explanation DFS](#explanation-def)
+- [Explanation DFS](#explanation-dfs)
 - [Explanation System Design](#explanation-system-design)
 - [Explanation Redis Commands](#explanation-redis-commands)
 - [Technologies Used](#technologies-used)
