@@ -43,7 +43,7 @@ It is important to note that a node can have `EOW=true` but `isLeaf=false`. Chec
 
 In order to understand the DFS(Depth First Search), we will look at code of method `public List<String> findMatchingPhrases(String prefix)` and analyze it in more detail.
 
-```
+```java
 public List<String> findMatchingPhrases(String prefix) {
 		TrieNode subTreeRoot = findSubTree(prefix);
 		if (subTreeRoot != null) {
