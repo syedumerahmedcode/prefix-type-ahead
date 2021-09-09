@@ -64,6 +64,33 @@ The above method uses modified depth first search to find all the terminal nodes
 
 Inside this method, we first get the subtree for the given prefix. If a subtree exists, we call *findMatchingPhrases()* with newly found subTree and a new array list. If the subtree is null, we return an empty collection from the method. Due to the reason who the call stack builds up during recursion, all matching phrases are returned. Both *findSubTree()* and *findMatchingPhrases()* are explained below:
 
+
+**TrieNode findSubTree(String prefix)**
+
+The main purpose of this method is to find the node that begins at the end of the input prefix and it ultimately allows us to search for all words that match the given prefix. More interesting is *private method findSubtree(TrieNode currentNode, String prefix, int index)* which is called recursively.
+
+```java
+
+private TrieNode findSubTree(String prefix) {
+		return findSubtree(root, prefix, INITIAL_WEIGHT);
+	}
+
+	private TrieNode findSubtree(TrieNode currentNode, String prefix, int index) {
+		// base condition
+		if (isPrefixEmpty(prefix) || indexEqualsSizeOfThePrefix(prefix, index)) {
+			return currentNode;
+		}
+		TrieNode tempNode = currentNode.children.get(prefix.charAt(index);
+		if (tempNode == null) {
+			return null;
+		}
+		/*recursive call*/
+		return findSubtree(tempNode, prefix, index + 1);
+	}
+```
+
+Here, our base condition is to check if Prefix is empty or index equals size of the prefix. If yes, we return the current node. If not, we get child which matches the phrase at initial index. If the child is not null, it means that there is still a subtree and it is then recursively called.
+
 **!!! In progress !!!**
 
 ## Explanation System Design

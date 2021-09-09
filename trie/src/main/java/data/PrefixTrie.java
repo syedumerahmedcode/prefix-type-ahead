@@ -147,7 +147,6 @@ public class PrefixTrie {
 		}
 		/*recursive call*/
 		return findSubtree(tempNode, prefix, index + 1);
-
 	}
 
 	private TrieNode getChildWhichMatchesThePhraseAtInitialIndex(TrieNode currentNode, String prefix, int index) {
