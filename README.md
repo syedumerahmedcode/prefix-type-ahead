@@ -91,6 +91,24 @@ private TrieNode findSubTree(String prefix) {
 
 Here, our base condition is to check if Prefix is empty or index equals size of the prefix. If yes, we return the current node. If not, we get child which matches the phrase at initial index. If the child is not null, it means that there is still a subtree and it is then recursively called.
 
+**List<String> findMatchingPhrases(String prefix)**
+
+It consists of modified depth first search to find all the terminal nodes that represent prefix matched phrases. The input `@param prefix` represents the input prefix whereas `@return` value is a list of all possible phrases that contain the prefix.
+
+```java
+public List<String> findMatchingPhrases(String prefix) {
+		TrieNode subTreeRoot = findSubTree(prefix);
+		if (subTreeRoot != null) {
+			// Recursive DFS
+			return findMatchingPhrases(subTreeRoot, new ArrayList<String>());
+		} else {
+			return Collections.EMPTY_LIST;
+		}
+	}
+```
+
+The idea is find the subTree for the prefix and if it is not null, it will recursively call a private method which will recursively call itself and the resulting call stack will take care of the rest.  
+
 **!!! In progress !!!**
 
 ## Explanation System Design
