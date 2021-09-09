@@ -125,9 +125,9 @@ private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
 	}
 ```
 
-Inside this private method, we first check the if end of word is reached for a given node(i.e. `node.EOW == true`). If yes, we add the phrase to the result set. This , however, is not a terminating condition as *a node can have EOW=true but it can have leaf nodes*. This is checked in the second base condition to verify if current node is a leaf node. If yes, the weight of node is incremented and the result is returned.
+Inside this private method, we first check the if end of word is reached for a given node(i.e. `node.EOW == true`). If yes, we add the phrase to the result set. This , however, is not a terminating condition as __a node can have EOW=true but it can have leaf nodes__. This is checked in the second base condition to verify if current node is a leaf node. If yes, the weight of node is incremented and the result is returned.
 
-Otherwise, if both base conditions as not satisfied, we get a stream of the keyset of node's children and for each node in the stream, we call `findMatchingPhrases()` recursively.
+Otherwise, if both base conditions as not satisfied, we get a stream of the key set of node's children and for each node in the stream, we call `findMatchingPhrases()` recursively.
 
 **Reference: The source code for the DFS algorithm is present in [PrefixTrie.java](https://github.com/syedumerahmedcode/prefix/blob/master/trie/src/main/java/data/PrefixTrie.java) class.**
 
