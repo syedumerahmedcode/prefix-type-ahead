@@ -64,6 +64,7 @@ public class PrefixTrie {
 	}
 
 	private void insertPhrase(String phrase, TrieNode currentNode, int index) {
+		// base condition
 		if (phrase.length() == index) {
 			currentNode.EOW = true;
 			currentNode.phrase = phrase;
@@ -78,6 +79,7 @@ public class PrefixTrie {
 			currentNode.children.put(currentCharacter, newNode);
 		}
 
+		/*recursive call*/
 		insertPhrase(phrase, newNode, index + 1);
 	}
 
@@ -100,13 +102,16 @@ public class PrefixTrie {
 	}
 
 	private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
+		// one base condition
 		if (node.EOW == true) {
 			result.add(node.phrase);
+			// another base condition
 			if (isLeaf.test(node)) {
 				node.weight++;
 				return result;
 			}
 		}
+		/*recursive call*/
 		node.children.keySet().stream().forEach(child -> findMatchingPhrases(node.children.get(child), result));
 		return result;
 	}
@@ -125,6 +130,7 @@ public class PrefixTrie {
 	}
 
 	private TrieNode findSubtree(TrieNode currentNode, String prefix, int index) {
+		// base condition
 		if (isPrefixEmpty(prefix) || indexEqualsSizeOfThePrefix(prefix, index)) {
 			return currentNode;
 		}
@@ -132,6 +138,7 @@ public class PrefixTrie {
 		if (tempNode == null) {
 			return null;
 		}
+		/*recursive call*/
 		return findSubtree(tempNode, prefix, index + 1);
 
 	}
