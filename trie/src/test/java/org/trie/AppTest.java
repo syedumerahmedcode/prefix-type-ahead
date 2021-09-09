@@ -1,4 +1,4 @@
-package org.trie1;
+package org.trie;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
