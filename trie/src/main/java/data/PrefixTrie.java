@@ -102,10 +102,10 @@ public class PrefixTrie {
 
 	private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
 		// one base condition
-		if (node.EOW == true) {
+		if (isEndOfWordReached(node)) {
 			result.add(node.phrase);
 			// another base condition
-			if (isLeaf.test(node)) {
+			if (isCurrentNodeALeafNode(node)) {
 				node.weight++;
 				return result;
 			}
@@ -113,6 +113,14 @@ public class PrefixTrie {
 		/*recursive call*/
 		node.children.keySet().stream().forEach(child -> findMatchingPhrases(node.children.get(child), result));
 		return result;
+	}
+
+	private boolean isCurrentNodeALeafNode(TrieNode node) {
+		return isLeaf.test(node);
+	}
+
+	private boolean isEndOfWordReached(TrieNode node) {
+		return node.EOW == true;
 	}
 
 	/**
