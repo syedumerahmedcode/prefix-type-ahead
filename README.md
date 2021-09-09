@@ -56,7 +56,9 @@ public List<String> findMatchingPhrases(String prefix) {
 ```
 The above method uses modified depth first search to find all the terminal nodes that represent prefix matched phrases. `@param prefix` is the input prefix whereas the method returns a list of all possible phrases that contain the prefix.
 
-!!! In progress !!!
+Inside this method, we first get the subtree for the given prefix. If a subtree exists, we call *findMatchingPhrases()* with newly found subTree and a new array list. If the subtree is null, we return an empty collection from the method. Due to the reason who the call stack builds up during recursion, all matching phrases are returned. Both *findSubTree()* and *findMatchingPhrases()* are explained below:
+
+**!!! In progress !!!**
 
 ## Explanation System Design
 
