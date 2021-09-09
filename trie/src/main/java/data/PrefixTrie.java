@@ -96,7 +96,7 @@ public class PrefixTrie {
 			// Recursive DFS
 			return findMatchingPhrases(subTreeRoot, new ArrayList<String>());
 		} else {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
 	}
 
