@@ -130,7 +130,7 @@ Inside this private method, we first check the if end of word is reached for a g
 
 Otherwise, if both base conditions as not satisfied, we get a stream of the keyset of node's children and for each node in the stream, we call `findMatchingPhrases()` recursively.
 
-**Reference: The source code for the DFS is present in [PrefixTrie.java](../prefix/blob/blob/master/trie/src/main/java/data/PrefixTrie.java)**
+**Reference: The source code for the DFS is present in [PrefixTrie.java](https://github.com/syedumerahmedcode/prefix/blob/master/trie/src/main/java/data/PrefixTrie.java)**
 
 ## Explanation System Design
 
