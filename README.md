@@ -41,7 +41,22 @@ It is important to note that a node can have `EOW=true` but `isLeaf=false`. Chec
 
 ## Explanation DFS
 
-- TBD
+In order to understand the DFS(Depth First Search), we will look at code of method `public List<String> findMatchingPhrases(String prefix)` and analyze it in more detail.
+
+```
+public List<String> findMatchingPhrases(String prefix) {
+		TrieNode subTreeRoot = findSubTree(prefix);
+		if (subTreeRoot != null) {
+			// Recursive DFS
+			return findMatchingPhrases(subTreeRoot, new ArrayList<String>());
+		} else {
+			return Collections.EMPTY_LIST;
+		}
+	}
+```
+The above method uses modified depth first search to find all the terminal nodes that represent prefix matched phrases. `@param prefix` is the input prefix whereas the method returns a list of all possible phrases that contain the prefix.
+
+!!! In progress !!!
 
 ## Explanation System Design
 

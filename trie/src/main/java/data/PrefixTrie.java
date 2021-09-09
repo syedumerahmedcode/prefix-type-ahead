@@ -87,7 +87,7 @@ public class PrefixTrie {
 	 * Modified depth first search to find all the terminal nodes that represent
 	 * prefix matched phrases.
 	 * 
-	 * @param prefix The input perfix.
+	 * @param prefix The input prefix.
 	 * @return A list of all possible phrases that contain the prefix.
 	 */
 	public List<String> findMatchingPhrases(String prefix) {
@@ -98,7 +98,6 @@ public class PrefixTrie {
 		} else {
 			return Collections.EMPTY_LIST;
 		}
-
 	}
 
 	private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
