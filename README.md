@@ -107,7 +107,28 @@ public List<String> findMatchingPhrases(String prefix) {
 	}
 ```
 
-The idea is find the subTree for the prefix and if it is not null, it will recursively call a private method which will recursively call itself and the resulting call stack will take care of the rest.  
+The idea is find the subTree for the prefix and if it is not null, it will recursively call a private method which will recursively call itself and the resulting call stack will take care of the rest. 
+
+```java
+private List<String> findMatchingPhrases(TrieNode node, List<String> result) {
+		// one base condition
+		if (isEndOfWordReached(node)) {
+			result.add(node.phrase);
+			// another base condition
+			if (isCurrentNodeALeafNode(node)) {
+				node.weight++;
+				return result;
+			}
+		}
+		/*recursive call*/
+		node.children.keySet().stream().forEach(child -> findMatchingPhrases(node.children.get(child), result));
+		return result;
+	}
+```
+
+Inside this private method, we first check the if end of word is reached for a given node(i.e. `node.EOW == true`). If yes, we add the phrase to the result set. This , however, is not a terminating condition as *a node can have EOW=true but it can have leaf nodes*. This is checked in the second base condition to verify if current node is a leaf node. If yes, the weight of node is incremented and the result is returned.
+
+Otherwise, if both base conditions as not satisfied, we get a stream of the keyset of node's children and for each node in the stream, we call `findMatchingPhrases()` recursively.
 
 **!!! In progress !!!**
 
