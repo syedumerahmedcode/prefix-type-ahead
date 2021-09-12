@@ -175,6 +175,8 @@ The idea is to fetch the data from MongoDB every 5 minutes, clean the cache and 
 
 - Since the cache is in memory right now and no data is saved in MongoDB, Data Aggregator is currently not implemented.
 
+Note: The main idea for this project came from the following [Youtube channel](https://www.youtube.com/c/TheSimpleEngineer).
+
 ## Explanation Redis Commands
 
 The command used to create a docker instance of redis: 
