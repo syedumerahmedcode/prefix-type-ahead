@@ -12,7 +12,9 @@
 
 ## Introduction
 
-This project demonstrates auto completion capability (also known as the look ahead feature) which one sees when one types something in google search bar. To accomplish this Trie data structure is used. The project consists of two modules: `trie` which contains the trie structure for prefix and `prefixweb` which is used to connect the backend with the outside world via REST APIs.
+This project demonstrates auto completion capability (also known as the look ahead feature) which one sees when one types something in google search bar. To accomplish this Trie data structure is used. The project consists of two modules: `trie` which contains the trie structure for prefix and `prefixweb` which is used to connect the backend with the outside world via REST APIs. 
+
+The main idea for this project came from the following [Youtube video](https://www.youtube.com/watch?v=Ye2_C_Nw_Ow).
 
 ## Explanation TrieNode
 
@@ -175,7 +177,7 @@ The idea is to fetch the data from MongoDB every 5 minutes, clean the cache and 
 
 - Since the cache is in memory right now and no data is saved in MongoDB, Data Aggregator is currently not implemented.
 
-Note: The main idea for this project came from the following [Youtube channel](https://www.youtube.com/c/TheSimpleEngineer).
+
 
 ## Explanation Redis Commands
 
