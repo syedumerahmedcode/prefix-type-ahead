@@ -8,6 +8,7 @@
 - [Explanation Redis Commands](#explanation-redis-commands)
 - [Technologies Used](#technologies-used)
 - [Commands](#commands)
+- [Contribution](#contribution)
 - [Contact Information](#contact-information)
 
 ## Introduction
@@ -257,6 +258,10 @@ To compile and test, please execute
 To run the application, please navigate to the `prefixweb` folder and then please execute
 > mvn spring-boot:run
 
+
+## Contribution
+
+Feature requests, issues, pull requests and questions are welcome.
 
 
 ## Contact Information
