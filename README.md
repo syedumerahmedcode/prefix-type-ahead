@@ -261,7 +261,7 @@ To run the application, please navigate to the `prefixweb` folder and then pleas
 
 ## Contribution
 
-Feature requests, issues, pull requests and questions are welcome.
+Feature requests, issues, pull requests and questions are welcome. -
 
 
 ## Contact Information
